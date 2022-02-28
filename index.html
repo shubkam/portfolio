@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open Sans">
+      <style>
+          :root{
+ 
+  font-family:"Open Sans";
+  --main-red: #be3144;
+  --main-gray: #303841;
+  --main-white:#f0f0f0;
+  --main-green: rgb(43,35,1);
+  --main-beige:#EFDECD;
+  color: var(--main-white);
+}
+
+
+/* Base reset */
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:inherit;
+}
+
+h1{
+  color:var(--main-green);
+  font-weight:bold;  
+  font-size: 3rem;  
+  margin-top: 15vh;
+}
+ h2{
+  color:inherit;
+  font-weight:700;  
+  font-size: 2rem;  
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+@media (max-width: 1000px){
+  
+  h1{
+    margin-left: 5vw;
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+}
+
+a{
+  text-decoration:none;
+}
+
+
+
+/* #navbar, #welcome-section, #projects, #contact*/
+.outer
+{ 
+  width: 100vw;
+  max-width: 100vw; 
+  box-sizing: border-box;
+  display:grid;
+  margin:0;
+  padding:0;
+  
+}
+
+
+/* Navbar style */
+#navbar  {
+  overflow:hidden;
+  background-color: var(--main-red);    
+  height: 2.8em; 
+   
+  width:100%;
+  max-width:100%;
+  position:fixed;
+  top:0;
+  left:0;  
+  z-index: 10;
+  
+}
+
+#navbar a{  
+  color: inherit;   
+  font-size:1.5em;
+  font-weight: 500;
+  padding: 0 20px 0.5em 20px;  
+}
+
+#navbar a:hover{
+  background-color: gray;
+}
+
+@media (min-width: 1000px){
+  #navbar div{    
+    float: right;
+    padding-right: 2vw;
+  }
+  
+}
+
+/*@media (max-width: 1000px){
+  #navbar{
+    max-width:100vw;
+  }
+}*/
+
+
+/* For Galaxy Fold */
+@media (max-width:300px){
+    #navbar{
+      font-size:0.6em;
+      margin:0;
+      padding:0;
+
+    }
+}
+
+
+
+
+
+/* Welcome section style */
+
+#welcome-section{  
+  background-color: var(--main-beige); 
+  height: 100vh;
+  max-height: 100vh; 
+  
+}
+
+#photo{
+  margin: 100px 0 0 3vw;
+  max-width: 300px;  
+ max-height:500px;
+  border-radius:50%;
+  
+}
+
+@media (max-width: 1300px){
+  
+  #office-desk{
+    display:none;
+  }
+}
+
+#about{
+  display:flex; 
+
+}
+.about-me{
+  border: 2px solid gray;  
+  border-radius : 25px; 
+  background-color: beige; 
+  z-index:0;
+  color: var(--main-green);
+  padding: 3em;
+  margin-top:50px;
+  //box-sizing: border-box;
+  width:300px;
+  height:auto;
+  max-height:400px;
+}
+
+/* Desktop */
+@media (min-width: 1300px){
+      
+      #office-desk{  
+              background-size:auto 100vh;
+              background-repeat: no-repeat;
+              background-position: right;  
+              height: 100vh;
+              max-height: 100vh;  
+      }
+      #about{
+          justify-content: space-between;
+      }
+  
+      .about-me{
+           width:20vw;
+           height:auto; 
+      } 
+  
+}
+
+/* Mid sized screens like Nesthub */
+@media (min-width: 1000px and max-width: 1300px){
+  
+  #about{
+    width: 100vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+   grid-column-gap: auto;
+  }
+ 
+}
+
+/* Smaller screens like phones */
+@media (max-width:1000px){   
+ 
+  #photo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+  }
+ 
+  
+  .about-me{
+    font-size:0.8em;
+    max-width:70vw;
+  }
+  
+}
+
+.span-class{
+  color: var(--main-red);
+  margin-top: 0px;
+  margin:auto;  
+  
+}
+
+
+/* Projects section style */
+
+#projects{
+  background-color: rgba(43,35,1,0.7);  
+  padding: 0.5rem 1rem; 
+  margin:0; 
+  
+}
+#projects header{
+ 
+  width:70vw;
+  max-width: 70vw;
+  margin:auto;
+  margin-bottom: 5rem;
+  border-bottom : 0.6px solid var(--main-white);
+}
+
+ .project-container{
+      width:100vw;
+      display: grid;  
+}
+
+
+
+
+#projects img, figcaption{
+  border: 1px solid black; 
+  margin:0;
+}
+
+#projects a{
+   color:var(--main-white);    
+}
+#projects a:hover .code{
+  display: inline;
+}
+
+#projects figcaption{          
+      text-transform: capitalize;
+      text-align:center;
+      background-color: var(--main-gray);    
+      padding: 1em 0 1em 0;     
+      margin-bottom:  15px;
+    }
+
+.source-code{
+  
+  margin-top:0;  
+  text-align:center;
+  font-size:0.9em;
+}
+
+.source-code a{
+  border:0.5px solid white;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+
+@media (min-width: 1000px){
+    .project-container{      
+      grid-template-columns: repeat(3 , 3fr);
+      grid-template-rows: 500px 500px;
+      grid-row-gap: 30px;
+      justify-items: center;
+      margin-bottom: 30px;
+      }
+
+    #projects img, figcaption{
+      width: 25vw;
+      max-width:25vw; 
+      }
+
+    #projects img{
+      height: 350px; 
+    }
+
+   
+}
+
+@media (max-width:1000px){
+  #project-container{      
+    grid-row-gap: 10vh;   
+    justify-items:center;
+   
+  }  
+  #projects img, figcaption, .source-code{
+      width: 90vw;
+      max-width:90vw; 
+      }
+ 
+  .source-code{
+    margin-bottom: 30px;
+  }
+ 
+}
+
+
+
+
+
+.code{
+  color: var(--main-red);
+  display:none;
+}
+
+
+/* Contact section style */
+
+#contact{
+  background-color:var(--main-gray);  
+  padding: 0.5rem;  
+}
+
+.contact-links{
+  text-align:center;
+  display:flex;
+  justify-content:space-evenly;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  width:800px;
+  margin:auto;
+  margin-top:0;
+  margin-bottom: 50px;
+}
+
+.links{  
+  color: var(--main-white);
+  font-size:1.5rem;  
+  font-weight: normal;
+  margin-top: 0;
+}
+
+@media (max-width:1000px)
+{
+  .contact-links{
+    width:80vw;
+    max-width:80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px 20px;
+    justify-items: center;
+    border-style: double ;
+    border-color:var(--main-white);
+    padding: 0.5em;
+    border-radius: 15px;
+    
+  }
+  
+  .links{
+    font-size:1rem;
+  }
+  
+}
+
+
+@media (min-width:1000px){
+  
+      #contact a:hover{
+        margin-top: 10px;
+      }
+}
+
+
+      
+      </style>
+
+  </head>
+  <body>
+      <div class="outer">
+    <nav id="navbar" >
+      <div>
+          <a href="#welcome-section"> About</a>
+          <a href="#projects"> Work</a>
+          <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  
+  
+    <main>
+      <section id="welcome-section">        
+        <div id="about">  
+          <img src="https://github.com/shubkam/website/blob/main/shubham.jpg?raw=true" alt="My photo" id="photo">
+          <div id="">
+            <header><h1>Shubham Kamat</h1></header>
+            <div class = "about-me">
+              <p>Hi, I am <strong>Shubham Kamat</strong>, an <strong>Application Developer</strong>. I have five years of experience working in small as well as larger teams, developing Windows and Full stack Web applications. Besides application development and maintenance, I also like working with data.  </p>
+              
+            </div> 
+          </div>
+         <img id="office-desk" src="https://images.pexels.com/photos/3716515/pexels-photo-3716515.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" style="border:none; ">
+        </div>
+      </section>
+
+      <section id="projects">
+        <header><h2>These are some of my responsive front-end projects</h2></header>
+        <div class="project-container">
+          
+          
+           <!------Project 1 ---->
+                
+            <div>
+              <a href="https://shubkam.github.io/product-landing-page/" target="_blank">
+                  <figure>
+                    <img src="https://github.com/shubkam/website/blob/main/product-landing.jpg?raw=true" alt="A Product Landing Page">
+                    <figcaption><span class="code"><</span>FCC product landing page<span class="code">/></span></figcaption>
+                  </figure>
+              </a>
+              <div class="source-code"><a href="https://codepen.io/skamat/pen/abVWMGL" target="_blank">View source code</a></div>
+            </div>  
+          
+          
+          <!------Project 2 ---->
+            <div>
+              <a href="https://zodiac-signs.herokuapp.com/" target="_blank">
+              <figure>
+                <img src="https://github.com/shubkam/website/blob/main/zodiac.jpg?raw=true" alt="An Interactive Zodiac sign Information Fetcher">
+                <figcaption><span class="code"><</span>Zodiac Info Fetcher<span class="code">/></span></figcaption>
+              </figure>
+             </a>
+                <div class="source-code"><a href="https://github.com/shubkam/ZodiacApp" target="_blank">View source code</a></div>
+            </div>
+              
+               <!------Project 3 ---->
+              
+            <div>
+              <a href="https://searchanybooks.herokuapp.com/" target="_blank">
+              <figure>
+                <img src="https://github.com/shubkam/website/blob/main/book-search.jpg?raw=true" alt="A Book Search Engine">
+                <figcaption><span class="code"><</span>Book Search Engine<span class="code">/></span></figcaption>
+              </figure>
+             </a>
+                <div class="source-code"><a href="https://github.com/shubkam/BookSearch" target="_blank">View source code</a></div>
+            </div>
+          
+          <!------Project 4 ---->
+            <div>     
+                  <a href="https://shubkam.github.io/tribute-page/" target="_blank">
+                    <figure>
+                      <img src="https://github.com/shubkam/website/blob/main/tribute.jpg?raw=true" alt="A Tribute Page">     <figcaption><span class="code"><</span>tribute page<span class="code">/></span></figcaption>
+                    </figure>
+                  </a>  
+                  <div class="source-code"><a href="https://codepen.io/skamat/details/yLPbmpP" target="_blank">View source code</a></div>
+            </div>
+              
+          <!------Project 5 ---->
+             
+            <div >
+              <a href="https://shubkam.github.io/js-documentation/" target="_blank">
+                <figure>
+                  <img src="https://github.com/shubkam/website/blob/main/js-documentation.jpg?raw=true" alt="A Technical Documentaion Page">
+                  <figcaption><span class="code"><</span>JS documentation<span class="code">/></span></figcaption>
+                </figure>
+              </a> 
+                
+              <div class="source-code"><a href="https://codepen.io/skamat/pen/zYPEYVo" target="_blank">View source code</a></div>
+            </div>
+         
+               <!------Project 6 ---->
+            
+            <div  >
+              <a href="https://shubkam.github.io/fccSurveyForm/" target="_blank">
+              <figure>
+                <img src="https://github.com/shubkam/website/blob/main/survey-form.jpg?raw=true" alt="A Survey Form">
+                <figcaption><span class="code"><</span>survey form<span class="code">/></span></figcaption>
+              </a>
+              <div class="source-code"><a href="https://codepen.io/skamat/pen/ExbNReb" target="_blank">View source code</a></div>
+            </div>
+         
+                
+        
+              
+           <!------Project 7 ---->
+                
+            <div>
+              <a href="https://shubkam.github.io/portfolio/" target="_blank">
+                  <figure>
+                    <img src="https://github.com/shubkam/website/blob/main/portfolio.jpg?raw=true" alt="This Project Portfolio Website">
+                    <figcaption><span class="code"><</span>This Project Portfolio Website<span class="code">/></span></figcaption>
+                  </figure>
+              </a>
+              <div class="source-code"><a href="https://codepen.io/skamat/pen/zYPPvRO" target="_blank">View source code</a></div>
+            </div>    
+        </div>
+      </section>
+              
+              
+      <section id="contact">
+        <header><h2>Let's work together ...<h2></header>
+          <div class="contact-links">
+              <a class="links" href="https://github.com/shubkam" target="_blank"><i class="fab fa-github"></i>&nbsp;Github </a>  
+            <a class="links" href="https://www.linkedin.com/in/shubham-kamat-064791b" target="_blank"><i class="fab fa-linkedin"></i>&nbsp;LinkedIn </a> 
+            <a class="links" href="mailto:kamat.shubham@gmail.com" target="_blank" ><i class="fas fa-envelope"></i>&nbsp;Email </a> 
+            <a class="links" href="tel:201-665-8250" target="_blank"><i class="fas fa-mobile-alt"></i>&nbsp;Phone </a> 
+          </div>
+      </section> 
+    </main>
+</div>
+  
+  </body>
+</html>
