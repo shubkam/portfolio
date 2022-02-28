@@ -6,387 +6,392 @@
       <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open Sans">
       <style>
+        @import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
           :root{
  
-  font-family:"Open Sans";
-  --main-red: #be3144;
-  --main-gray: #303841;
-  --main-white:#f0f0f0;
-  --main-green: rgb(43,35,1);
-  --main-beige:#EFDECD;
-  color: var(--main-white);
-}
+            font-family:"Open Sans";
+            --main-red: #be3144;
+            --main-gray: #303841;
+            --main-white:#f0f0f0;
+            --main-green: rgb(43,35,1);
+            --main-beige:#EFDECD;
+            color: var(--main-white);
+          }
 
 
-/* Base reset */
-*{
-  margin:0;
-  padding: 0;
-  box-sizing:inherit;
-}
+          /* Base reset */
+          *{
+            margin:0;
+            padding: 0;
+            box-sizing:inherit;
+          }
 
-h1{
-  color:var(--main-green);
-  font-weight:bold;  
-  font-size: 3rem;  
-  margin-top: 15vh;
-}
- h2{
-  color:inherit;
-  font-weight:700;  
-  font-size: 2rem;  
-  text-align: center;
-  padding: 20px 0 20px 0;
-}
+          h1{
+            color:var(--main-green);
+            font-weight:bold;  
+            font-size: 3rem;  
+            margin-top: 15vh;
+          }
+           h2{
+            color:inherit;
+            font-weight:700;  
+            font-size: 2rem;  
+            text-align: center;
+            padding: 20px 0 20px 0;
+          }
 
-@media (max-width: 1000px){
-  
-  h1{
-    margin-left: 5vw;
-    font-size: 1.5rem;
-  }
-  h2{
-    font-size: 1.5rem;
-  }
-}
+          @media (max-width: 1000px){
 
-a{
-  text-decoration:none;
-}
+            h1{
+              margin-left: 5vw;
+              font-size: 1.5rem;
+            }
+            h2{
+              font-size: 1.5rem;
+            }
+          }
 
-
-
-/* #navbar, #welcome-section, #projects, #contact*/
-.outer
-{ 
-  width: 100vw;
-  max-width: 100vw; 
-  box-sizing: border-box;
-  display:grid;
-  margin:0;
-  padding:0;
-  
-}
-
-
-/* Navbar style */
-#navbar  {
-  overflow:hidden;
-  background-color: var(--main-red);    
-  height: 2.8em; 
-   
-  width:100%;
-  max-width:100%;
-  position:fixed;
-  top:0;
-  left:0;  
-  z-index: 10;
-  
-}
-
-#navbar a{  
-  color: inherit;   
-  font-size:1.5em;
-  font-weight: 500;
-  padding: 0 20px 0.5em 20px;  
-}
-
-#navbar a:hover{
-  background-color: gray;
-}
-
-@media (min-width: 1000px){
-  #navbar div{    
-    float: right;
-    padding-right: 2vw;
-  }
-  
-}
-
-/*@media (max-width: 1000px){
-  #navbar{
-    max-width:100vw;
-  }
-}*/
-
-
-/* For Galaxy Fold */
-@media (max-width:300px){
-    #navbar{
-      font-size:0.6em;
-      margin:0;
-      padding:0;
-
-    }
-}
+          a{
+            text-decoration:none;
+          }
 
 
 
+          /* #navbar, #welcome-section, #projects, #contact*/
+          .outer
+          { 
+            width: 100vw;
+            max-width: 100vw; 
+            box-sizing: border-box;
+            display:grid;
+            margin:0;
+            padding:0;
+
+          }
 
 
-/* Welcome section style */
+          /* Navbar style */
+          #navbar  {
+            overflow:hidden;
+            background-color: var(--main-red);    
+            height: 2.8em; 
 
-#welcome-section{  
-  background-color: var(--main-beige); 
-  height: 100vh;
-  max-height: 100vh; 
-  
-}
+            width:100%;
+            max-width:100%;
+            position:fixed;
+            top:0;
+            left:0;  
+            z-index: 10;
 
-#photo{
-  margin: 100px 0 0 3vw;
-  max-width: 300px;  
- max-height:500px;
-  border-radius:50%;
-  
-}
+          }
 
-@media (max-width: 1300px){
-  
-  #office-desk{
-    display:none;
-  }
-}
+          #navbar a{  
+            color: inherit;   
+            font-size:1.5em;
+            font-weight: 500;
+            padding: 0 20px 0.5em 20px;  
+          }
 
-#about{
-  display:flex; 
+          #navbar a:hover{
+            background-color: gray;
+          }
 
-}
-.about-me{
-  border: 2px solid gray;  
-  border-radius : 25px; 
-  background-color: beige; 
-  z-index:0;
-  color: var(--main-green);
-  padding: 3em;
-  margin-top:50px;
-  //box-sizing: border-box;
-  width:300px;
-  height:auto;
-  max-height:400px;
-}
+          @media (min-width: 1000px){
+            #navbar div{    
+              float: right;
+              padding-right: 2vw;
+            }
 
-/* Desktop */
-@media (min-width: 1300px){
-      
-      #office-desk{  
-              background-size:auto 100vh;
-              background-repeat: no-repeat;
-              background-position: right;  
-              height: 100vh;
-              max-height: 100vh;  
-      }
-      #about{
-          justify-content: space-between;
-      }
-  
-      .about-me{
-           width:20vw;
-           height:auto; 
-      } 
-  
-}
+          }
 
-/* Mid sized screens like Nesthub */
-@media (min-width: 1000px and max-width: 1300px){
-  
-  #about{
-    width: 100vw;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-   grid-column-gap: auto;
-  }
- 
-}
-
-/* Smaller screens like phones */
-@media (max-width:1000px){   
- 
-  #photo{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-  }
- 
-  
-  .about-me{
-    font-size:0.8em;
-    max-width:70vw;
-  }
-  
-}
-
-.span-class{
-  color: var(--main-red);
-  margin-top: 0px;
-  margin:auto;  
-  
-}
+          /*@media (max-width: 1000px){
+            #navbar{
+              max-width:100vw;
+            }
+          }*/
 
 
-/* Projects section style */
+          /* For Galaxy Fold */
+          @media (max-width:300px){
+              #navbar{
+                font-size:0.6em;
+                margin:0;
+                padding:0;
 
-#projects{
-  background-color: rgba(43,35,1,0.7);  
-  padding: 0.5rem 1rem; 
-  margin:0; 
-  
-}
-#projects header{
- 
-  width:70vw;
-  max-width: 70vw;
-  margin:auto;
-  margin-bottom: 5rem;
-  border-bottom : 0.6px solid var(--main-white);
-}
-
- .project-container{
-      width:100vw;
-      display: grid;  
-}
-
-
-
-
-#projects img, figcaption{
-  border: 1px solid black; 
-  margin:0;
-}
-
-#projects a{
-   color:var(--main-white);    
-}
-#projects a:hover .code{
-  display: inline;
-}
-
-#projects figcaption{          
-      text-transform: capitalize;
-      text-align:center;
-      background-color: var(--main-gray);    
-      padding: 1em 0 1em 0;     
-      margin-bottom:  15px;
-    }
-
-.source-code{
-  
-  margin-top:0;  
-  text-align:center;
-  font-size:0.9em;
-}
-
-.source-code a{
-  border:0.5px solid white;
-  border-radius: 5px;
-  padding: 0.5em;
-}
-
-
-@media (min-width: 1000px){
-    .project-container{      
-      grid-template-columns: repeat(3 , 3fr);
-      grid-template-rows: 500px 500px;
-      grid-row-gap: 30px;
-      justify-items: center;
-      margin-bottom: 30px;
-      }
-
-    #projects img, figcaption{
-      width: 25vw;
-      max-width:25vw; 
-      }
-
-    #projects img{
-      height: 350px; 
-    }
-
-   
-}
-
-@media (max-width:1000px){
-  #project-container{      
-    grid-row-gap: 10vh;   
-    justify-items:center;
-   
-  }  
-  #projects img, figcaption, .source-code{
-      width: 90vw;
-      max-width:90vw; 
-      }
- 
-  .source-code{
-    margin-bottom: 30px;
-  }
- 
-}
+              }
+          }
 
 
 
 
 
-.code{
-  color: var(--main-red);
-  display:none;
-}
+          /* Welcome section style */
+
+          #welcome-section{  
+            background-color: var(--main-beige); 
+            height: 100vh;
+            max-height: 100vh; 
+
+          }
+
+          #photo{
+            margin: 100px 0 0 3vw;
+            max-width: 300px;  
+           max-height:500px;
+            border-radius:50%;
+
+          }
+
+          @media (max-width: 1300px){
+
+            #office-desk{
+              display:none;
+            }
+          }
+
+          #about{
+            display:flex; 
+
+          }
+          .about-me{
+            border: 2px solid gray;  
+            border-radius : 25px; 
+            background-color: beige; 
+            z-index:0;
+            color: var(--main-green);
+            padding: 3em;
+            margin-top:50px;
+            //box-sizing: border-box;
+            width:300px;
+            height:auto;
+            max-height:400px;
+          }
+
+          /* Desktop */
+          @media (min-width: 1300px){
+
+                #office-desk{  
+                        background-size:auto 100vh;
+                        background-repeat: no-repeat;
+                        background-position: right;  
+                        height: 100vh;
+                        max-height: 100vh;  
+                }
+                #about{
+                    justify-content: space-between;
+                }
+
+                .about-me{
+                     width:20vw;
+                     height:auto; 
+                } 
+
+          }
+
+          /* Mid sized screens like Nesthub */
+          @media (min-width: 1000px and max-width: 1300px){
+
+            #about{
+              width: 100vw;
+              display:grid;
+              grid-template-columns: 1fr 1fr;
+             grid-column-gap: auto;
+            }
+
+          }
+
+          /* Smaller screens like phones */
+          @media (max-width:1000px){   
+
+            #photo{
+              width:50px;
+              height:50px;
+              border-radius:50%;
+            }
 
 
-/* Contact section style */
+            .about-me{
+              font-size:0.8em;
+              max-width:70vw;
+            }
 
-#contact{
-  background-color:var(--main-gray);  
-  padding: 0.5rem;  
-}
+          }
 
-.contact-links{
-  text-align:center;
-  display:flex;
-  justify-content:space-evenly;
-  flex-wrap:wrap;
-  align-items:flex-start;
-  width:800px;
-  margin:auto;
-  margin-top:0;
-  margin-bottom: 50px;
-}
+          .span-class{
+            color: var(--main-red);
+            margin-top: 0px;
+            margin:auto;  
 
-.links{  
-  color: var(--main-white);
-  font-size:1.5rem;  
-  font-weight: normal;
-  margin-top: 0;
-}
-
-@media (max-width:1000px)
-{
-  .contact-links{
-    width:80vw;
-    max-width:80vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 20px 20px;
-    justify-items: center;
-    border-style: double ;
-    border-color:var(--main-white);
-    padding: 0.5em;
-    border-radius: 15px;
-    
-  }
-  
-  .links{
-    font-size:1rem;
-  }
-  
-}
+          }
 
 
-@media (min-width:1000px){
-  
-      #contact a:hover{
-        margin-top: 10px;
-      }
-}
+          /* Projects section style */
+
+          #projects{
+            background-color: rgba(43,35,1,0.7);  
+            padding: 0.5rem 1rem; 
+            margin:0; 
+
+          }
+          #projects header{
+
+            width:70vw;
+            max-width: 70vw;
+            margin:auto;
+            margin-bottom: 5rem;
+            border-bottom : 0.6px solid var(--main-white);
+          }
+
+           .project-container{
+                width:100vw;
+                display: grid;  
+          }
+
+
+
+
+          #projects img, figcaption{
+            border: 1px solid black; 
+            margin:0;
+          }
+
+          #projects a{
+             color:var(--main-white);    
+          }
+          #projects a:hover .code{
+            display: inline;
+          }
+
+          #projects figcaption{          
+                text-transform: capitalize;
+                text-align:center;
+                background-color: var(--main-gray);    
+                padding: 1em 0 1em 0;     
+                margin-bottom:  15px;
+              }
+
+          .source-code{
+
+            margin-top:0;  
+            text-align:center;
+            font-size:0.9em;
+          }
+
+          .source-code a{
+            border:0.5px solid white;
+            border-radius: 5px;
+            padding: 0.5em;
+          }
+
+
+          @media (min-width: 1000px){
+              .project-container{      
+                grid-template-columns: repeat(3 , 3fr);
+                grid-template-rows: 500px 500px;
+                grid-row-gap: 30px;
+                justify-items: center;
+                margin-bottom: 30px;
+                }
+
+              #projects img, figcaption{
+                width: 25vw;
+                max-width:25vw; 
+                }
+
+              #projects img{
+                height: 350px; 
+              }
+
+
+          }
+
+          @media (max-width:1000px){
+            #project-container{      
+              grid-row-gap: 10vh;   
+              justify-items:center;
+
+            }  
+            #projects img, figcaption, .source-code{
+                width: 90vw;
+                max-width:90vw; 
+                }
+
+            .source-code{
+              margin-bottom: 30px;
+            }
+
+          }
+
+
+
+
+
+          .code{
+            color: var(--main-red);
+            display:none;
+          }
+
+
+          /* Contact section style */
+
+          #contact{
+            background-color:var(--main-gray);  
+            padding: 0.5rem;  
+          }
+
+          .contact-links{
+            text-align:center;
+            display:flex;
+            justify-content:space-evenly;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            width:800px;
+            margin:auto;
+            margin-top:0;
+            margin-bottom: 50px;
+          }
+
+          .links{  
+            color: var(--main-white);
+            font-size:1.5rem;  
+            font-weight: normal;
+            margin-top: 0;
+          }
+        
+          i {
+            font-family: fontawesome !important;
+          }
+
+          @media (max-width:1000px)
+          {
+            .contact-links{
+              width:80vw;
+              max-width:80vw;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-rows: 1fr 1fr;
+              grid-gap: 20px 20px;
+              justify-items: center;
+              border-style: double ;
+              border-color:var(--main-white);
+              padding: 0.5em;
+              border-radius: 15px;
+
+            }
+
+            .links{
+              font-size:1rem;
+            }
+
+          }
+
+
+          @media (min-width:1000px){
+
+                #contact a:hover{
+                  margin-top: 10px;
+                }
+          }
 
 
       
